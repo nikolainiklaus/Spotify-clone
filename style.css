@@ -44,12 +44,34 @@ h2 {
 
 .progress-area {
   width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-i .play-pause-btn {
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(107, 107, 107);
+}
+
+.play-pause-btn {
   font-size: 2rem;
 }
 
 .other-feature-area {
-  width: 10vw;
+  display: flex;
+  align-items: center;
+}
+
+.volume-area {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.volume-area .progress-bar {
+  width: 9em;
 }
