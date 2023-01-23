@@ -43,8 +43,8 @@ main {
   background: linear-gradient(
     180deg,
     rgba(140, 140, 140, 1) 0%,
-    rgba(71, 71, 71, 1) 22%,
-    rgba(0, 0, 0, 1) 60%
+    rgba(71, 71, 71, 1) 7%,
+    rgba(18, 18, 18, 1) 15%
   );
   /* width: 100vw; */
   height: 100vh;
@@ -58,7 +58,7 @@ main {
 }
 
 .icons i.bi-pause-circle-fill {
-  font-size: 60px;
+  font-size: 3.8rem;
   color: #1db954;
 }
 
