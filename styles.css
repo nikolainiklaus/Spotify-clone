@@ -1,0 +1,22 @@
+body {
+  background-color: #121212;
+}
+
+.Nagiviation-sec {
+  background-color: #535252;
+  height: 80vh;
+  width: 25vh;
+}
+
+.card {
+  background-color: rgba(255, 68, 2, 0.2);
+  color: white;
+}
+
+.card img {
+  box-shadow: 8px -1px 8px 1px rgba(0, 0, 0, 0.29);
+}
+
+h2 {
+  color: white;
+}
