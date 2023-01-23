@@ -1,0 +1,77 @@
+body {
+  background: rgb(69, 154, 70);
+  background: linear-gradient(
+    180deg,
+    rgba(69, 154, 70, 1) 0%,
+    rgba(13, 85, 13, 1) 20%,
+    rgba(0, 0, 0, 1) 36%
+  );
+}
+
+.nagiviation-sec {
+  background-color: #121212;
+  height: 100vh;
+}
+
+.col-10 .card {
+  background-color: rgba(243, 197, 180, 0.2);
+  color: white;
+  width: 350px;
+  height: 100px;
+}
+
+.card img {
+  box-shadow: 8px -1px 8px 1px rgba(0, 0, 0, 0.29);
+}
+
+h2 {
+  color: white;
+}
+
+.music-player {
+  color: white;
+  height: 10vh;
+  background-color: #181818;
+}
+
+.music-player img {
+  width: 100px;
+}
+
+.music-player i {
+  margin-right: 20px;
+}
+
+.progress-area {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(107, 107, 107);
+}
+
+.play-pause-btn {
+  font-size: 2rem;
+}
+
+.other-feature-area {
+  display: flex;
+  align-items: center;
+}
+
+.volume-area {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.volume-area .progress-bar {
+  width: 9em;
+}
