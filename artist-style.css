@@ -45,10 +45,10 @@ main {
     180deg,
     rgba(140, 140, 140, 1) 0%,
     rgba(71, 71, 71, 1) 7%,
-    rgba(18, 18, 18, 1) 15%
+    rgba(18, 18, 18, 1) 21%
   );
   /* width: 100vw; */
-  height: 10vh;
+  height: 100vh;
   /* position: absolute;
   margin-top: 450px; */
 }
