@@ -8,8 +8,10 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -179,17 +181,50 @@
     </section>
 
     <section class="player-section fixed-bottom">
-        <div class="music-player d-flex align-items-center">
+        <div class="music-player d-flex justify-content-between align-items-center">
             <div class="song-info d-flex">
                 <div class="col-md-4">
                     <img src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
                         class="img-fluid rounded-start" alt="..." />
                 </div>
-                <div class="col-md-8 pl-0 d-flex justify-content-start align-items-center flex-column">
+                <div class="col-md-8 pl-0 d-flex justify-content-center align-items-center flex-column">
                     <h6 class="card-title">Song Title goes here</h6>
                     <p class="card-text ">Artist name here</p>
                 </div>
+                <div class="icons-area d-flex justify-content-center align-items-center">
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-pip"></i>
+                </div>
             </div>
+
+            <div class="play-info-area d-flex flex-column justify-content-center align-items-center">
+                <div class="icons-area">
+                    <i class="bi bi-shuffle"></i>
+                    <i class="bi bi-skip-start-fill"></i>
+                    <i class="bi bi-play-circle-fill play-pause-btn"></i>
+                    <i class="bi bi-skip-end-fill"></i>
+                    <i class="bi bi-repeat"></i>
+                </div>
+                <div class="progress-area">
+                    <span>0:47</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span>3:20</span>
+                </div>
+            </div>
+
+            <div class="other-feature-area mr-3">
+                <i class="bi bi-music-note-list"></i>
+                <i class="bi bi-pc-display"></i>
+                <div class="volume-area">
+                    <i class="bi bi-volume-up"></i>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </section>

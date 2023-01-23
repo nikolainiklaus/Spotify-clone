@@ -37,3 +37,19 @@ h2 {
 .music-player img {
   width: 100px;
 }
+
+.music-player i {
+  margin-right: 20px;
+}
+
+.progress-area {
+  width: 20vw;
+}
+
+i .play-pause-btn {
+  font-size: 2rem;
+}
+
+.other-feature-area {
+  width: 10vw;
+}
