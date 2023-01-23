@@ -19,7 +19,6 @@ main {
   background-image: url("https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1");
   background-size: cover;
   height: 40vh;
-  width: 100vw;
 }
 
 .artist-info-area {
