@@ -1,0 +1,148 @@
+body {
+    
+    background-image: linear-gradient(
+      to top,
+      #121212,
+      #121212,
+      #121212,
+      #121212,
+      #121212,
+      #161419,
+      #1a151e,
+      #201522,
+      #311327,
+      #430d24,
+      #53051b,
+      #5e0506
+    );
+    background-size: cover;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+  main {
+    margin-left: 16rem; 
+    padding: 2rem;
+    color: #dedee0;
+}
+ 
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+  body::-webkit-scrollbar-thumb {
+    background: #555;
+}
+  div::-webkit-scrollbar-thumb {
+    background: #555;
+}
+    div::-webkit-scrollbar {
+    width: 0.5rem;
+}
+.navbar-custom {
+      width: 16rem; 
+      height: 92vh; 
+      position: fixed;
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+.navbar-nav {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.nav-item {
+    font-weight: 500;
+}
+  
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+.button-hover:hover {
+    background-color: #1a1a1a;
+}
+.fa-plus {
+    background-color: #555;
+    padding: 0.5rem;
+    border-radius: 1px;
+}
+.card-text {
+    text-decoration: none !important;
+}
+  
+.fa-user-group {
+    color: gray;
+}
+.heading {
+    font-size: 25px;
+    margin-left: 0.5rem;
+}
+.extra-small-text {
+    font-size: 5px;
+}
+.margin-top {
+    margin-top: 2rem;
+}
+.playlists {
+    overflow: auto;
+    overflow-x: hidden;
+    height: 46vh;
+    color: #a5a5a7;
+    margin-left: 1rem;
+}
+.playlists li {
+    margin-left: 2rem;
+}
+.nav-item-playlists {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+ 
+.download {
+    color: #a5a5a7;
+}
+#rightnav {
+    position: absolute;
+    right: 0rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+#righttwo {
+    position: absolute;
+    right: 12rem;
+}
+.chevrons {
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.chevrons:hover {
+    cursor: pointer;
+}
+.fa-chevron-right,
+.fa-chevron-left {
+    color: #a5a5a7;
+    box-shadow: 3px 5px 5px rgba(65, 65, 65, 0.349);
+}
+.side-bar {
+    color: #dedee0;
+    text-decoration: none;
+}
+.side-bar:hover {
+    color: #f5f5f5;
+}
