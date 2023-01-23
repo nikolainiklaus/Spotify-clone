@@ -2,9 +2,11 @@
   --main-bg-color: #121212;
   --songcard-bg-color: #171717;
   --songcard-bg-color-hover: #282828;
+  --songcard-description-color: #a7a7a7;
 }
 
 body {
+  padding-left: 241px;
   background-color: var(--main-bg-color);
 }
 
@@ -14,10 +16,9 @@ body {
 }
 
 .song-img {
-  height: 200px;
+  height: 160px;
   object-fit: cover;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-radius: 0.5rem;
   box-shadow: 10px 10px 44px 0px rgba(0, 0, 0, 0.75);
   overflow: hidden;
 }
@@ -35,7 +36,7 @@ body {
 }
 
 .song-card p {
-  color: #a7a7a7;
+  color: var(--songcard-description-color);
 }
 
 .song-card:hover {
@@ -63,8 +64,8 @@ body {
 
 .play-button-outer {
   margin: 25% auto;
-  width: 3.2em;
-  height: 3.2em;
+  width: 3em;
+  height: 3em;
   background-color: #1bd760;
   cursor: pointer;
   border-radius: 50%;
@@ -72,7 +73,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   bottom: 106px;
-  right: 31px;
+  right: 23px;
   opacity: 0;
   transition: all 0.3s ease;
   z-index: 0;
@@ -80,13 +81,13 @@ body {
 
 .play-button {
   margin: 0 auto;
-  top: 31%;
-  left: 5%;
+  top: 33%;
+  left: 4%;
   position: relative;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0.6em 0 0.6em 1em;
+  border-width: 0.5em 0 0.5em 0.9em;
   border-color: transparent transparent transparent #000;
   opacity: 0.75;
 }
@@ -98,4 +99,18 @@ body {
 
 .play-button-outer:hover .play-button {
   opacity: 1;
+}
+
+.shows {
+  margin-top: 50px;
+}
+
+.shows h4 {
+  color: white;
+}
+
+.shows h6 {
+  color: var(--songcard-description-color);
+  font-size: 14px;
+  font-weight: 400;
 }
