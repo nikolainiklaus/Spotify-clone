@@ -122,13 +122,12 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="jumbotron-fluid d-flex artist px-0">
-
                         <div class="artist-info-area ml-4">
                             <div class="verified-span d-flex mb-0">
                                 <i class="bi bi-patch-check-fill bs-primary"></i>
                                 <p>Verified Artist</p>
                             </div>
-                            <h2>Artist Name</h2>
+                            <h2 id="artist-name">Artist Name</h2>
                             <p>2,000,000 monthly listeners</p>
                         </div>
                     </div>
@@ -139,6 +138,22 @@
                             <i class="bi bi-pause-circle-fill"></i>
                             <button class="follow-btn rounded py-1"> FOLLOW </button>
                             <i class="bi bi-three-dots"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3>Popular</h3>
+                                <table class="table">
+                                    <tbody id="artisit-popu-songs">
+                                        <!-- list of popular song should go here -->
+                                    </tbody>
+                                </table>
+                                <a class="text-muted text-decoration-none" href="">SEE ALL</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Artisit Pick</h3>
+                                <img src="https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1"
+                                    alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,10 +211,12 @@
     </section>
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8539ff3369.js" crossorigin="anonymous"></script>
+    <script src="artist-js.js"></script>
 </body>
 
 </html>

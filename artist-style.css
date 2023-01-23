@@ -72,3 +72,8 @@ button.follow-btn {
   border: 1px solid white;
   margin-inline: 20px;
 }
+
+.text-muted.text-decoration-none {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
