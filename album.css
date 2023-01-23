@@ -2,7 +2,7 @@
   --body-bg-color: #121212;
 }
 
-body {
+body,.jumbotron {
   background-image: linear-gradient(
     to top,
     #121212,
@@ -14,8 +14,8 @@ body {
     #1a151e,
     #201522,
     #3C1533,
-    #5E1F4A,
     #592049,
+    #5E1F4A,
     #7D2C67,
     #903477,
     #A13984
@@ -26,13 +26,18 @@ body {
   overflow-x: hidden;
   background-attachment: fixed;
 }
-
+.jumbotron{
+  color: white;
+}
 
 .hero-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  box-shadow: 20px -27px 77px 15px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 20px -27px 77px -25px rgba(0, 0, 0, 0.58);
 }
+
 
 .hero-description {
   margin-top: auto;
