@@ -6,7 +6,6 @@
 }
 
 body {
-  padding-left: 241px;
   background-color: var(--main-bg-color);
 }
 
@@ -102,7 +101,7 @@ body {
 }
 
 .shows {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .shows h4 {
