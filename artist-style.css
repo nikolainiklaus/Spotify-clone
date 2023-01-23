@@ -45,5 +45,5 @@ main {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 450px;
+  margin-top: 450px;
 }
