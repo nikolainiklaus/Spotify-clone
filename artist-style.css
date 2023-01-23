@@ -77,3 +77,9 @@ button.follow-btn {
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+#artist-profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
