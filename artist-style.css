@@ -43,3 +43,11 @@ main {
   color: #3d91f4 !important;
   margin-right: 10px;
 }
+
+.start-artist {
+  position: absolute;
+  background-color: rgb(58, 58, 58);
+  width: 100vw;
+  height: 50vh;
+  z-index: 2;
+}
