@@ -1,0 +1,23 @@
+body {
+  background-color: #121212;
+}
+
+.nagiviation-sec {
+  background-color: #535252;
+  height: 80vh;
+}
+
+.card {
+  background-color: rgba(243, 197, 180, 0.2);
+  color: white;
+  width: 350px;
+  height: 100px;
+}
+
+.card img {
+  box-shadow: 8px -1px 8px 1px rgba(0, 0, 0, 0.29);
+}
+
+h2 {
+  color: white;
+}
