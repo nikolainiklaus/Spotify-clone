@@ -1,0 +1,19 @@
+:root {
+  --body-bg-color: #121212;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  padding-left: 250px;
+}
+
+.hero-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-description {
+  margin-top: auto;
+  margin-bottom: auto;
+}
