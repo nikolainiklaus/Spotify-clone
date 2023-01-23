@@ -2,20 +2,20 @@ main {
   padding: 0;
 }
 
-.body {
+/* .body {
   position: relative;
   padding-top: 10px;
   padding-inline: 10px;
-}
+} */
 
-.main-container {
+/* .main-container {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .jumbotron-fluid {
-  position: absolute;
+  /* position: absolute; */
   background-image: url("https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1");
   background-size: cover;
   height: 40vh;
@@ -42,8 +42,8 @@ main {
 
 .start-artist {
   background-color: rgb(58, 58, 58);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 450px;
+  /* width: 100vw; */
+  height: 10vh;
+  /* position: absolute;
+  top: 450px; */
 }
