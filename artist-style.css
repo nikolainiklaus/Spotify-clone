@@ -1,0 +1,45 @@
+main {
+  padding: 0;
+}
+
+.body {
+  position: relative;
+  padding-top: 10px;
+  padding-inline: 10px;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jumbotron-fluid {
+  position: absolute;
+  background-image: url("https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1");
+  background-size: cover;
+  height: 40vh;
+  width: 100vw;
+  top: 0;
+}
+
+.artist-info-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 30px;
+  color: white;
+}
+
+.artist-info-area h2 {
+  font-size: 4rem;
+}
+
+.verified-span i.bi.bi-patch-check-fill {
+  color: #3d91f4 !important;
+  margin-right: 10px;
+}
