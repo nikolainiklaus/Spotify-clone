@@ -38,16 +38,40 @@ const getSongsList = (id) => {
   )
     .then((response) => response.json())
     .then(
-      (dataSongs) => console.log(dataSongs.data)
-      //   displaySongPopular(dataSongs)
+      (dataSongs) => displaySongPopular(dataSongs)
+
+      // displaySongPopular(dataSongs)
     )
     .catch((err) => {
       console.log(err);
     });
 };
 
-const displaySongPopular = (dataSongs) => {
+const displaySongPopular = (response) => {
+  let songs = response.data;
+  console.log("Here", songs);
   let songTableList = document.getElementById("artisit-popu-songs");
+  let index = 1;
+  songs.forEach((song) => {
+    songTableList.innerHTML += `  <th scope="row">
+    ${index}
+</th>
+<th class="image-area p-0">
+    <img class=""
+        src="${song.album.cover_medium}"
+        alt="">
+</th>
+<th>
+    ${song.title}
+</th>
+<th>
+${song.rank}
+</th>
+<th>
+    ${song.duration}
+</th>`;
+    index++;
+  });
 };
 
 window.onload = () => {
