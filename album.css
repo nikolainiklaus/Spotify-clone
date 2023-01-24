@@ -85,6 +85,10 @@ tr th {
   border-bottom: none;
 }
 
+.table {
+  margin-bottom: 60px;
+}
+
 .play-button-outer {
   margin: 0;
   width: 3em;
