@@ -2,169 +2,146 @@
   --body-bg-color: #121212;
 }
 
-body,.jumbotron {
-  background-image: linear-gradient(
-    to top,
-    #121212,
-    #121212,
-    #121212,
-    #121212,
-    #121212,
-    #161419,
-    #1a151e,
-    #201522,
-    #3C1533,
-    #592049,
-    #5E1F4A,
-    #7D2C67,
-    #903477,
-    #A13984
-  );
-  background-size: cover;
-  height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-  background-attachment: fixed;
-}
-.jumbotron{
+.jumbotron {
   color: white;
 }
 
-.hero-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  box-shadow: 20px -27px 77px 15px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 20px -27px 77px -25px rgba(0, 0, 0, 0.58);
+.cover {
+  margin-right: 20px;
 }
 
+.hero-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  box-shadow: 10px 10px 44px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
 
 .hero-description {
   margin-top: auto;
   margin-bottom: auto;
 }
-main {
-  margin-left: 16rem; 
-  padding: 2rem;
-  color: #dedee0;
-}
 
-body::-webkit-scrollbar {
-  width: 0.5rem;
-}
-body::-webkit-scrollbar-thumb {
-  background: #555;
-}
-div::-webkit-scrollbar-thumb {
-  background: #555;
-}
-  div::-webkit-scrollbar {
-  width: 0.5rem;
-}
-.navbar-custom {
-    width: 16rem; 
-    height: 92vh; 
-    position: fixed;
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
-.navbar-nav {
+.controls {
   position: relative;
-  list-style: none;
-  padding: 0;
+  height: 80px;
+  /* background-color: white; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+table tr {
+  color: white;
+}
+
+thead th:last-of-type {
+  text-align: right;
+}
+
+thead th:first-of-type {
+  width: 20px;
+  vertical-align: middle;
+  color: #827c84;
+}
+
+tbody tr td:last-of-type {
+  text-align: right;
+  color: #827c84;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+tbody tr td {
+  vertical-align: middle;
+}
+
+tbody p {
+  margin-bottom: 0;
+}
+
+tbody tr th {
+  vertical-align: middle;
+}
+
+.band-name {
+  color: #827c84;
+  font-size: 12px;
+}
+
+.song-title {
+  font-size: 12px;
+  color: #dbdbdb;
+  font-weight: 700;
+}
+
+tr th {
+  color: #827c84;
+  font-size: 13px;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th {
+  border-bottom: none;
+}
+
+.play-button-outer {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-.nav-item {
-  font-weight: 500;
-}
-
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.button-hover:hover {
-  background-color: #1a1a1a;
-}
-.fa-plus {
-  background-color: #555;
-  padding: 0.5rem;
-  border-radius: 1px;
-}
-.card-text {
-  text-decoration: none !important;
-}
-
-.fa-user-group {
-  color: gray;
-}
-.heading {
-  font-size: 25px;
-  margin-left: 0.5rem;
-}
-.extra-small-text {
-  font-size: 5px;
-}
-.margin-top {
-  margin-top: 2rem;
-}
-.playlists {
-  overflow: auto;
-  overflow-x: hidden;
-  height: 46vh;
-  color: #a5a5a7;
-  margin-left: 1rem;
-}
-.playlists li {
-  margin-left: 2rem;
-}
-.nav-item-playlists {
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-
-.download {
-  color: #a5a5a7;
-}
-#rightnav {
-  position: absolute;
-  right: 0rem;
-  padding: 0.5rem;
+  width: 3em;
+  height: 3em;
+  background-color: #1bd760;
   cursor: pointer;
-}
-#righttwo {
-  position: absolute;
-  right: 12rem;
-}
-.chevrons {
-  background-color: rgba(0, 0, 0, 0.459);
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
-  padding: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
+  bottom: 0px;
+  left: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 0;
 }
-.chevrons:hover {
-  cursor: pointer;
+
+.play-button {
+  margin: 0 auto;
+  top: 33%;
+  left: 4%;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5em 0 0.5em 0.9em;
+  border-color: transparent transparent transparent #000;
+  opacity: 0.75;
 }
-.fa-chevron-right,
-.fa-chevron-left {
-  color: #a5a5a7;
-  box-shadow: 3px 5px 5px rgba(65, 65, 65, 0.349);
+
+.play-button-outer:hover {
+  background-color: #1cdf63;
+  scale: 1.1;
 }
-.side-bar {
-  color: #dedee0;
-  text-decoration: none;
+
+.play-button-outer:hover .play-button {
+  opacity: 1;
 }
-.side-bar:hover {
-  color: #f5f5f5;
+
+.like-icon {
+  position: absolute;
+  bottom: 4px;
+  left: 70px;
+  font-size: 25px;
+}
+
+.hero-description p,
+h1 {
+  margin: 0;
+}
+
+.hero-description p {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-description h1 {
+  font-size: 40px;
+  font-weight: 700;
 }

@@ -1,0 +1,76 @@
+.nagiviation-sec {
+  background-color: #121212;
+  height: 100vh;
+}
+
+.morning-card .card {
+  background-color: rgba(243, 197, 180, 0.2);
+  color: white;
+  padding-right: 1rem;
+}
+
+.morning-card .card img {
+  box-shadow: 8px -1px 8px 1px rgba(0, 0, 0, 0.29);
+  max-height: 80px;
+}
+
+.morning-card-title {
+  margin-left: 1rem;
+  font-weight: 700;
+  padding-right: 1rem;
+}
+
+h2 {
+  color: white;
+}
+
+.music-player {
+  color: white;
+  height: 10vh;
+  background-color: #181818;
+}
+
+.music-player img {
+  width: 100px;
+}
+
+.song-info {
+  max-height: 100%;
+}
+.music-player i {
+  margin-right: 20px;
+}
+
+.progress-area {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(107, 107, 107);
+}
+
+.play-pause-btn {
+  font-size: 2rem;
+}
+
+.other-feature-area {
+  display: flex;
+  align-items: center;
+}
+
+.volume-area {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.volume-area .progress-bar {
+  width: 9em;
+}
