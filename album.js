@@ -1,10 +1,12 @@
-const url = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+const url = "https://striveschool-api.herokuapp.com/api/deezer/album";
 
-let album = {};
+const params = new URLSearchParams(location.search);
+const id = params.get("id");
+console.log(id); //this can either an id or null
 
 const getAlbum = async () => {
   try {
-    let res = await fetch(url);
+    let res = await fetch(url + "/" + id);
     if (res.ok) {
       let data = await res.json();
       //   console.log(typeof data);
