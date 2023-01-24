@@ -1,25 +1,10 @@
-// const getArtist = (artistId) => {
-//   fetch(
-//     `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`,
-//     {
-//       method: "GET",
-//     }
-//   )
-//     .then((response) => response.json())
-//     .then((artist) => {
-//       console.log(artist);
-//       displayArtist(artist);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// };
-
 // ed sheeran
 // 384236
+// queen
+// 412
 
-const getArtist = () => {
-  fetch("https://striveschool-api.herokuapp.com/api/deezer/artist/1562681", {
+const getArtist = (id) => {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`, {
     method: "GET",
   })
     .then((response) => response.json())
@@ -44,9 +29,9 @@ const displayArtist = (data) => {
   artistProfileIMG.src = data.picture_small;
 };
 
-const getSongsList = () => {
+const getSongsList = (id) => {
   fetch(
-    `https://striveschool-api.herokuapp.com/api/deezer/search?q=arianagrande`,
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`,
     {
       method: "GET",
     }
@@ -61,9 +46,13 @@ const getSongsList = () => {
     });
 };
 
-// const displaySongPopular = (dataSongs) => {};
+const displaySongPopular = (dataSongs) => {
+  let songTableList = document.getElementById("artisit-popu-songs");
+};
 
 window.onload = () => {
-  getArtist();
-  getSongsList();
+  const URLparams = new URLSearchParams(window.location.search);
+  const id = URLparams.get("id");
+  getArtist(384236);
+  getSongsList(384236);
 };

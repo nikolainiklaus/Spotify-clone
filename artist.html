@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Clone</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./top-bot-style.css" />
     <link rel="stylesheet" href="style.css" />
@@ -34,7 +34,7 @@
                     style="height: 60px">
                     <i class="fa-solid fa-house mx-3"></i>
                     <div class="w-75 d-flex">
-                        <a class="side-bar" href="#">Home</a>
+                        <a class="side-bar" href="./index.html">Home</a>
                     </div>
                 </button>
             </li>
@@ -145,30 +145,136 @@
                             <i class="bi bi-three-dots"></i>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
-                                <h3>Popular</h3>
-                                <table class="table">
-                                    <tbody id="artisit-popu-songs">
-                                        <!-- list of popular song should go here -->
-                                    </tbody>
-                                </table>
-                                <a class="text-muted text-decoration-none" href="">SEE ALL</a>
+                            <div class="col-sm-9 ">
+                                <div class="popular">
+                                    <h3>Popular</h3>
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Image</th>
+                                                <th scope="col">Title song</th>
+                                                <th scope="col">listeners</th>
+                                                <th scope="col">duration</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="artisit-popu-songs">
+                                            <!-- List of song should go here -->
+                                            <tr>
+                                                <th scope="row">
+                                                    1
+                                                </th>
+                                                <th class="image-area p-0">
+                                                    <img class=""
+                                                        src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
+                                                        alt="">
+                                                </th>
+                                                <th>
+                                                    Head in the clouds
+                                                </th>
+                                                <th>
+                                                    12,099,345
+                                                </th>
+                                                <th>
+                                                    3:20
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    2
+                                                </th>
+                                                <th class="image-area p-0">
+                                                    <img class=""
+                                                        src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
+                                                        alt="">
+                                                </th>
+                                                <th>
+                                                    Head in the clouds
+                                                </th>
+                                                <th>
+                                                    12,099,345
+                                                </th>
+                                                <th>
+                                                    3:20
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    3
+                                                </th>
+                                                <th class="image-area p-0">
+                                                    <img class=""
+                                                        src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
+                                                        alt="">
+                                                </th>
+                                                <th>
+                                                    Head in the clouds
+                                                </th>
+                                                <th>
+                                                    12,099,345
+                                                </th>
+                                                <th>
+                                                    3:20
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    4
+                                                </th>
+                                                <th class="image-area p-0">
+                                                    <img class=""
+                                                        src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
+                                                        alt="">
+                                                </th>
+                                                <th>
+                                                    Head in the clouds
+                                                </th>
+                                                <th>
+                                                    12,099,345
+                                                </th>
+                                                <th>
+                                                    3:20
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    5
+                                                </th>
+                                                <th class="image-area p-0">
+                                                    <img class=""
+                                                        src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
+                                                        alt="">
+                                                </th>
+                                                <th>
+                                                    Head in the clouds
+                                                </th>
+                                                <th>
+                                                    12,099,345
+                                                </th>
+                                                <th>
+                                                    3:20
+                                                </th>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <a class="text-decoration-none" href="">SEE ALL</a>
+                                </div>
+
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <h3>Artisit Pick</h3>
                                 <div class="d-flex">
-                                    <img id="artist-img"
+                                    <img id="artist-img" class="artist-image"
                                         src="https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1"
                                         alt="">
                                     <div class="info-area">
                                         <img id="artist-profile"
                                             src="https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1">
-                                        <span>Posted by <span class="artist-name">Artist name</span></span>
-                                        <p><span class="artist-name">Artist Name</span> Best Of</p>
-                                        <p>Playlist</p>
+                                        <span>Posted by <span class="artist-name">Artist name</span></span><br>
+                                        <span>Best Of</span>
+                                        <span>Playlist</span>
                                     </div>
-
-
                                 </div>
 
                             </div>
