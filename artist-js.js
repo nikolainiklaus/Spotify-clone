@@ -4,6 +4,15 @@
 // 412
 //bruno
 //429675
+//sza
+//5531258
+
+window.onload = () => {
+  const URLparams = new URLSearchParams(window.location.search);
+  const id = URLparams.get("id");
+  getArtist(412);
+  getSongsList(412);
+};
 
 const getArtist = (id) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`, {
@@ -71,11 +80,4 @@ const displaySongPopular = (response) => {
 
 const changeToMins = (mins) => {
   return Math.floor(mins / 60) + ":" + (mins % 60);
-};
-
-window.onload = () => {
-  const URLparams = new URLSearchParams(window.location.search);
-  const id = URLparams.get("id");
-  getArtist(429675);
-  getSongsList(429675);
 };
