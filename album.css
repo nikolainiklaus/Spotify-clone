@@ -10,6 +10,15 @@
   margin-right: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .hero-img {
   height: 200px;
   width: 200px;

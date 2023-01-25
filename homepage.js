@@ -33,7 +33,7 @@ const albumList1 = (fetchedList) => {
     <div
       class="col-md-8 pl-0 d-flex justify-content-start align-items-center morning-card-title"
     >
-    <a href="./artist.html?id=${list.id}"><p class="card-text">${list.title}</p></a>
+    <a href="./album.html?id=${list.album.id}"><p class="card-text">${list.album.title}</p></a>
     </div>
   </div>
 </div>
@@ -57,9 +57,10 @@ const albumList2 = (fetchedList) => {
     />
     <div class="card-body px-0">
     <a href="./artist.html?id=${list.artist.id}"><h6 class="card-title">${list.artist.name}</h6></a>
-      <p class="card-text">
-      ${list.title}
-      </p>
+    <a href="./album.html?id=${list.album.id}"><p class="card-text">
+    ${list.album.title}
+    </p></a>
+      
     </div>
     <div class="play-button-outer">
       <div class="play-button"></div>
@@ -86,9 +87,9 @@ const albumList3 = (fetchedList) => {
     />
     <div class="card-body px-0">
       <a href="./artist.html?${list.artist.id}"><h6 class="card-title">${list.artist.name}</h6></a>
-      <p class="card-text">
-      ${list.title}
-      </p>
+      <a href="./album.html?id=${list.album.id}"><p class="card-text">
+      ${list.album.title}
+      </p></a>
     </div>
     <div class="play-button-outer">
       <div class="play-button"></div>

@@ -20,7 +20,9 @@ const renderAlbum = (data) => {
   const { id, title, cover_medium, genres, artist, tracks } = data;
 
   document.getElementById("album-title").innerText = title;
-  document.getElementById("artist").innerText = artist.name;
+  document.getElementById(
+    "artist"
+  ).innerHTML = ` <a href="./artist.html?id=${artist.id}"<p>${artist.name}</p></a>`;
   document.getElementById("cover").innerHTML = `<img
   class="hero-img"
   src="${cover_medium}"
