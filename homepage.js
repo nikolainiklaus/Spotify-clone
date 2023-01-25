@@ -17,6 +17,9 @@ const id = URLparams.get("id");
 
 const getArtist = async () => {
   try {
+    document.getElementById("recently").innerHTML = "";
+    document.getElementById("shows").innerHTML = "";
+    document.getElementById("morning").innerHTML = "";
     let artistName = document.getElementById("artist-input").value;
     console.log(artistName);
     let res = await fetch(url + "/" + artistName);

@@ -50,4 +50,6 @@ const renderAlbum = (data) => {
   });
 };
 
-window.onload = getAlbum();
+window.onload = () => {
+  getAlbum();
+};
