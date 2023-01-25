@@ -2,9 +2,24 @@ const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const URLparams = new URLSearchParams(window.location.search);
 const id = URLparams.get("id");
 
-const getAlbum = async () => {
+// const searchArtist = () => {
+//   let artistName = document.getElementById("artist-input").value;
+//   console.log(artistName);
+//   fetch(url + "/" + artistName)
+//     .then((response) => {
+//       response.json();
+//     })
+//     .then((response) => getAlbum(response))
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
+
+const getArtist = async () => {
   try {
-    let res = await fetch(url + "/" + id);
+    let artistName = document.getElementById("artist-input").value;
+    console.log(artistName);
+    let res = await fetch(url + "/" + artistName);
     if (res.ok) {
       let data = await res.json();
       console.log(data);
@@ -60,7 +75,6 @@ const albumList2 = (fetchedList) => {
     <a href="./album.html?id=${list.album.id}"><p class="card-text">
     ${list.album.title}
     </p></a>
-      
     </div>
     <div class="play-button-outer">
       <div class="play-button"></div>
@@ -100,4 +114,4 @@ const albumList3 = (fetchedList) => {
   }
 };
 
-window.onload = getAlbum();
+window.onload = getArtist();
