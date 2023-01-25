@@ -84,7 +84,11 @@ a {
   border-radius: 1px;
 }
 .card-text {
-  text-decoration: none !important;
+  color: white;
+}
+
+.card-text:hover {
+  text-decoration: underline;
 }
 
 .fa-user-group {

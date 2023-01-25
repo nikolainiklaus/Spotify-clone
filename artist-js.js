@@ -10,8 +10,8 @@
 window.onload = () => {
   const URLparams = new URLSearchParams(window.location.search);
   const id = URLparams.get("id");
-  getArtist(412);
-  getSongsList(412);
+  getArtist(id);
+  getSongsList(id);
 };
 
 const getArtist = (id) => {
