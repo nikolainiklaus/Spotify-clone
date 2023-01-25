@@ -38,6 +38,8 @@ const displayArtist = (data) => {
   artistImage.src = data.picture_medium;
   let artistProfileIMG = document.getElementById("artist-profile");
   artistProfileIMG.src = data.picture_small;
+  let artistBGImg = document.querySelector(".jumbotron-fluid");
+  artistBGImg.style.backgroundImage = `url(${data.picture_xl})`;
 
   let fanNode = document.getElementById("fanbase");
   fanNode.innerText = data.nb_fan + " monthly listeners";

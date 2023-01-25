@@ -16,9 +16,12 @@ main {
 
 .jumbotron-fluid {
   /* position: absolute; */
-  background-image: url("https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1");
+  /* background-image: url("https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1"); */
+  background-size: 100% 100%;
   background-size: cover;
+  background-position: center;
   height: 40vh;
+  min-height: 340px;
 }
 
 .artist-info-area {
