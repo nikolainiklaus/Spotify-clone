@@ -12,7 +12,7 @@ const getAlbum = async () => {
       console.log(data);
       albumList1(data);
       albumList2(data);
-      albumList1(data);
+      albumList3(data);
     }
   } catch (error) {}
 };
@@ -20,15 +20,16 @@ const getAlbum = async () => {
 
 
 const albumList1 = (fetchedList) => {
-  let container = document.getElementById("morning")
-  for (let i = 0; i < fetchedList.length; i++) {
-      const list = fetchedList[i]
+  let songs = fetchedList.data
+  let container = document.querySelector("#morning")
+  for (let i = 0; i < 8; i++) {
+      const list = songs[i]
   container.innerHTML += `
   <div class="morning-card col-sm-12 col-md-4 col-lg-3">
   <div class="card mb-3 d-flex flex-row">
     <div class="col-md-4">
       <img
-        src="${list.cover_medium}"
+        src="${list.album.cover_medium}"
         class="img-fluid rounded-start"
         alt="..."
       />
@@ -43,16 +44,18 @@ const albumList1 = (fetchedList) => {
   `
 }
 }
+
 const albumList2 = (fetchedList) => {
-  let container = document.getElementById("recently")
-  for (let i = 0; i < fetchedList.length; i++) {
-      const list = fetchedList[i]
+  let songs = fetchedList.data
+  let container = document.querySelector("#recently")
+  for (let i = 0; i < 10; i++) {
+    const list = songs[i]
   container.innerHTML += `
   <div class="col mb-4">
   <div class="card px-3 py-3 song-card">
     <img
       class="song-img"
-      src="${list.cover_medium}"
+      src="${list.album.cover_medium}"
       class="card-img-top"
       alt="..."
     />
@@ -70,16 +73,18 @@ const albumList2 = (fetchedList) => {
   `
 }
 }
+
 const albumList3 = (fetchedList) => {
+  let songs = fetchedList.data
   let container = document.getElementById("shows")
-  for (let i = 0; i < fetchedList.length; i++) {
-      const list = fetchedList[i]
+  for (let i = 0; i < 10; i++) {
+      const list = songs[i]
   container.innerHTML += `
   <div class="col mb-4">
   <div class="card px-3 py-3 song-card">
     <img
       class="song-img"
-      src="${list.cover_medium}"
+      src="${list.album.cover_medium}"
       class="card-img-top"
       alt="..."
     />
