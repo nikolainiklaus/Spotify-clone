@@ -172,10 +172,15 @@ a {
 
 input[type="text"] {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 23px;
   letter-spacing: 0.5px;
   background: transparent;
   border: none;
   border: 1px solid black;
+  outline: none;
   color: #ffffff;
+}
+
+::placeholder {
+  opacity: 1;
 }
