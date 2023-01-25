@@ -161,6 +161,13 @@ a {
 
 .searchArea input {
   background-color: transparent;
+  color: #ffffff;
+  border: none;
+}
+
+.searchArea.active {
+  background-color: transparent;
+  border: none;
 }
 
 input[type="text"] {
@@ -169,5 +176,6 @@ input[type="text"] {
   letter-spacing: 0.5px;
   background: transparent;
   border: none;
+  border: 1px solid black;
   color: #ffffff;
 }

@@ -38,7 +38,7 @@
           style="height: 60px"">
             <div class=" iconSearch" onclick="getArtist()"><i class="fa-solid fa-magnifying-glass mx-3"></i></div>
         <div class="w-75 d-flex inputArea">
-          <input id="artist-input" type="text" class="form-control" placeholder="Search artist" />
+          <input id="artist-input" class="w-75" type="text" placeholder="Search artist" />
         </div>
   </div>
   </li>
@@ -535,9 +535,9 @@
   <script>
     const icon = document.querySelector('iconSearch');
     const search = document.querySelector("searchArea");
-    // icon.onclick = function () {
-    //   search.classList.toggle('active');
-    // }
+    icon.onclick = function () {
+      search.classList.toggle('active');
+    }
   </script>
 
 </body>
