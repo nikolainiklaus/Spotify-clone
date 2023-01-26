@@ -31,10 +31,9 @@ function getInfo() {
 }
     
    const user = document.getElementById("username");
+   const password = document.getElementById("password");
    const submit = document.getElementById("submit");
    const output = document.getElementById("dropdownMenuButton1");
-
-   
    
    /*submit.onclick = function () {
     const key = user.value;
