@@ -48,4 +48,5 @@ const loginFunction = () => {
   //     output.innerHTML += `${key}:${value}`;
   //   }
   //   window.location.href = "index.html";
+  // go to page index
 };
