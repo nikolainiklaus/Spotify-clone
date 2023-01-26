@@ -41,7 +41,7 @@ const albumList1 = (fetchedList) => {
     container.innerHTML += `
   <div class="morning-card col-sm-12 col-md-4 col-lg-3">
   <div class="card mb-3 d-flex flex-row">
-    <div class="col-md-4">
+    <div class="col-md-4 pl-0">
       <img
         src="${list.album.cover_medium}"
         class="img-fluid rounded-start"
