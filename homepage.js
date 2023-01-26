@@ -117,4 +117,15 @@ const albumList3 = (fetchedList) => {
   }
 };
 
-window.onload = getArtist();
+setUsername = () => {
+  let currentUser = localStorage.getItem("username");
+  document.getElementById(
+    "morning-header"
+  ).innerText = `Good morning ${currentUser}`;
+  document.getElementById("dropdownMenuButton1").innerText = `${currentUser}`;
+};
+
+window.onload = () => {
+  getArtist();
+  setUsername();
+};
