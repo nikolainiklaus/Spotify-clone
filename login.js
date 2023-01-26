@@ -19,9 +19,11 @@ function getInfo() {
 
   for (var i = 0; i < users.length; i++) {
     if (username == users[i].username && password == users[i].password) {
+      // if username & password are correct, we call the login Function
       loginFunction();
       return;
     } else {
+      // if username & password are *not* correct, we call print an error message
       console.log("Usename or Password Incorrect");
     }
   }
@@ -30,17 +32,15 @@ function getInfo() {
 const user = document.getElementById("username");
 const password = document.getElementById("password");
 const submit = document.getElementById("submit");
-// const output = document.getElementById("dropdownMenuButton1");
 
 const loginFunction = () => {
-  const key = user.value;
-  const value = password.value;
-  console.log(key);
-  console.log(value);
-  console.log("success");
-  if (key && value) {
-    localStorage.setItem("username", `${key}`);
-    console.log(localStorage.getItem("username"));
+  const currentUsername = user.value;
+  const password = password.value;
+  if (currentUsername && password) {
+    //"username": Lydia
+    //"username": Nikolai
+    //they have to be strings in order for localHost to work
+    localStorage.setItem("username", `${currentUsername}`);
     window.location.href = "index.html";
   }
   //   for (let i = 0; i < localStorage.length; i++) {
