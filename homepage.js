@@ -1,6 +1,8 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const URLparams = new URLSearchParams(window.location.search);
 const id = URLparams.get("id");
+let playStatus;
+let currentSong;
 
 // const searchArtist = () => {
 //   let artistName = document.getElementById("artist-input").value;
@@ -28,6 +30,17 @@ const getArtist = async () => {
       console.log(data);
       albumList1(data);
       albumList2(data);
+      getShows();
+    }
+  } catch (error) {}
+};
+
+const getShows = async () => {
+  try {
+    let res = await fetch(url + "/" + "coldplay");
+    if (res.ok) {
+      let data = await res.json();
+      console.log(data);
       albumList3(data);
     }
   } catch (error) {}
@@ -79,8 +92,8 @@ const albumList2 = (fetchedList) => {
     ${list.album.title}
     </p></a>
     </div>
-    <div class="play-button-outer">
-      <div class="play-button"></div>
+    <div id="card-${list.preview}" class="play-button-outer" >
+       <div onclick="playControls(event)" class="play-button" id="${list.preview}"></div>
     </div>
   </div>
 </div>
@@ -88,8 +101,8 @@ const albumList2 = (fetchedList) => {
   }
 };
 
-const albumList3 = (fetchedList) => {
-  let songs = fetchedList.data;
+const albumList3 = (data) => {
+  let songs = data.data;
   let container = document.getElementById("shows");
   for (let i = 0; i < 10; i++) {
     const list = songs[i];
@@ -108,14 +121,86 @@ const albumList3 = (fetchedList) => {
       ${list.album.title}
       </p></a>
     </div>
-    <div class="play-button-outer">
-      <div class="play-button"></div>
+    <div id="card-${list.preview}" class="play-button-outer" >
+       <div onclick="playControls(event)" class="play-button" id="${list.preview}"></div>
     </div>
+    
   </div>
 </div>
   `;
   }
 };
+
+const playControls = (list) => {
+  console.log(list.target.id);
+  let songUrl = list.target.id;
+
+  if (playStatus !== "playing" && currentSong !== songUrl) {
+    let videoPlayer = document.getElementById("videoPlayer");
+    videoPlayer.innerHTML = `<video id="vid" width="0" height="0">
+   <source
+     src="${songUrl}"audio/mpeg"
+   />
+   Your browser does not support the video tag.
+  </video>`;
+    let song = document.getElementById("vid");
+    song.play();
+    currentSong = songUrl;
+    playStatus = "playing";
+    let songCard = document.getElementById(`card-${songUrl}`);
+    songCard.innerHTML = `<div onclick="playControls(event)" class="pause-button" id="${songUrl}"></div>`;
+    songCard.classList.remove("play-button-outer");
+    songCard.classList.add("play-button-outer-show");
+  } else if (songUrl === currentSong && playStatus === "playing") {
+    let song = document.getElementById("vid");
+    song.pause();
+
+    playStatus = "paused";
+    currentSong = "";
+    document.getElementById(
+      `card-${songUrl}`
+    ).innerHTML = `<div onclick="playControls(event)" class="play-button" id="${songUrl}"></div>`;
+    document
+      .getElementById(`card-${songUrl}`)
+      .classList.remove("play-button-outer-show");
+    document
+      .getElementById(`card-${songUrl}`)
+      .classList.add("play-button-outer");
+  } else {
+    let videoPlayer = document.getElementById("videoPlayer");
+    videoPlayer.innerHTML = `<video id="vid" width="0" height="0" autoplay>
+   <source
+     src="${songUrl}"audio/mpeg"
+   />
+   Your browser does not support the video tag.
+  </video>`;
+    document.getElementById(
+      `card-${currentSong}`
+    ).innerHTML = `<div onclick="playControls(event)" class="play-button" id="${currentSong}"></div>`;
+    document
+      .getElementById(`card-${currentSong}`)
+      .classList.remove("play-button-outer-show");
+    document
+      .getElementById(`card-${currentSong}`)
+      .classList.add("play-button-outer");
+    currentSong = songUrl;
+    playStatus = "playing";
+    document.getElementById(
+      `card-${songUrl}`
+    ).innerHTML = `<div onclick="playControls(event)" class="pause-button" id="${songUrl}"></div>`;
+    document
+      .getElementById(`card-${songUrl}`)
+      .classList.add("play-button-outer-show");
+    document
+      .getElementById(`card-${songUrl}`)
+      .classList.remove("play-button-outer");
+  }
+  console.log(playStatus);
+};
+
+// changePlayButton = (songUrl) => {
+//   document.getElementById(songUrl).innerHTML = `<div onclick="playControls(event)" class="play-button" id="${list.preview}"></div>`;
+// };
 
 setUsername = () => {
   // we retrieve the username key from the localStorage. This will return a name

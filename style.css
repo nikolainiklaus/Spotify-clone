@@ -20,6 +20,11 @@ body {
   overflow-x: hidden;
   background-attachment: fixed;
 }
+
+.videoplayer {
+  width: 300px;
+}
+
 main {
   margin-left: 16rem;
   padding: 2rem;
