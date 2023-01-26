@@ -69,13 +69,18 @@ const displaySongPopular = (response) => {
   let songTableList = document.getElementById("artisit-popu-songs");
   let index = 1;
   songs.forEach((song) => {
-    songTableList.innerHTML += ` <td scope="row">${index}</td>
+    // <span class="iconify-inline" data-icon="oi:audio-spectrum" style="color: #1db954;" data-flip="horizontal,vertical"></span>
+    songTableList.innerHTML += ` <td scope="row">${index}
+    
+    </td>
     <td class="image-area p-0">
-    <img class="" src="${song.album.cover_medium}" >
+    <a href="./album.html?id=${song.album.id}"><img class="" src="${
+      song.album.cover_medium
+    }" ></a>
     </td>
     <td>${song.title}</td>
-    <td>${song.rank}</td>
-    <td>${changeToMins(song.duration)}</td>`;
+    <td class="text-muted">${song.rank}</td>
+    <td class="text-muted">${changeToMins(song.duration)}</td>`;
     index++;
   });
 };
