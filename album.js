@@ -50,6 +50,15 @@ const renderAlbum = (data) => {
   });
 };
 
+setUsername = () => {
+  // we retrieve the username key from the localStorage. This will return a name
+  let currentUser = localStorage.getItem("username");
+
+  //then we are setting the innerText/html of the elementss to the name
+  document.getElementById("dropdownMenuButton1").innerText = `${currentUser}`;
+};
+
 window.onload = () => {
   getAlbum();
+  setUsername();
 };

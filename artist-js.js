@@ -12,6 +12,7 @@ window.onload = () => {
   const id = URLparams.get("id");
   getArtist(id);
   getSongsList(id);
+  setUsername();
 };
 
 const getArtist = (id) => {
@@ -87,4 +88,12 @@ const displaySongPopular = (response) => {
 
 const changeToMins = (mins) => {
   return Math.floor(mins / 60) + ":" + (mins % 60);
+};
+
+setUsername = () => {
+  // we retrieve the username key from the localStorage. This will return a name
+  let currentUser = localStorage.getItem("username");
+
+  //then we are setting the innerText/html of the elementss to the name
+  document.getElementById("dropdownMenuButton1").innerText = `${currentUser}`;
 };
