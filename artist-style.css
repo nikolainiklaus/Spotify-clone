@@ -17,7 +17,7 @@ main {
 .jumbotron-fluid {
   /* position: absolute; */
   /* background-image: url("https://img-www.tf-cdn.com/artist/10/88rising.jpeg?_v=20220501121343&w=412&h=206&auto=compress&fm=pjpg&fit=crop&crop=faces%2Centropy&dpr=1"); */
-  height: 45vh;
+  height: 50vh;
   min-height: 340px;
   background-size: cover;
   background-position: center;
@@ -31,6 +31,7 @@ main {
   align-items: flex-start;
   margin-left: 30px;
   color: white;
+  text-shadow: 1px 1px 2px black;
 }
 
 .artist-info-area h2 {
@@ -54,6 +55,44 @@ main {
   height: 60vh;
   /* position: absolute;
   margin-top: 450px; */
+}
+
+.play-button-outer {
+  margin: 0;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #1bd760;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-bottom: 0;
+  bottom: 0px;
+  left: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.play-button {
+  margin: 0 auto;
+  top: 33%;
+  left: 4%;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5em 0 0.5em 0.9em;
+  border-color: transparent transparent transparent #000;
+  opacity: 0.75;
+}
+
+.play-button-outer:hover {
+  background-color: #1cdf63;
+  scale: 1.1;
+}
+
+.play-button-outer:hover .play-button {
+  opacity: 1;
 }
 
 .icons {
@@ -131,10 +170,32 @@ th.image-area {
 }
 
 .bi-three-dots:hover {
-  color: antiquewhite;
+  color: #1db954;
 }
 
 .table tr:hover {
   background-color: transparent;
   color: #1db954;
+}
+
+.hoverText {
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.hoverText:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
 }
