@@ -35,8 +35,8 @@ const submit = document.getElementById("submit");
 
 const loginFunction = () => {
   const currentUsername = user.value;
-  const password = password.value;
-  if (currentUsername && password) {
+  const userPassword = password.value;
+  if (currentUsername && userPassword) {
     //"username": Lydia
     //"username": Nikolai
     //they have to be strings in order for localHost to work
