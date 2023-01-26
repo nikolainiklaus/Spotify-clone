@@ -49,6 +49,7 @@ div::-webkit-scrollbar-thumb {
 div::-webkit-scrollbar {
   width: 0.5rem;
 }
+
 .navbar-custom {
   width: 16rem;
   height: 92vh;
@@ -78,6 +79,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
+}
+.list:hover{
+  text-decoration: none;
+  color:green;
 }
 
 .button-hover:hover {
