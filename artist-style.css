@@ -133,3 +133,8 @@ th.image-area {
 .bi-three-dots:hover {
   color: antiquewhite;
 }
+
+.table tr:hover {
+  background-color: transparent;
+  color: #1db954;
+}
