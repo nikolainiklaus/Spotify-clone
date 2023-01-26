@@ -1,193 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Clone</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./top-bot-style.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="middle.css" />
-    <link rel="stylesheet" href="album.css" />
-  </head>
-  <body>
-    <div class="navbar-custom d-none d-lg-block d-xl-block d-xxl-block">
-      <ul class="navbar-nav">
-        <li class="nav-item my-3">
-          <div
-            class="text-light heading d-flex align-items-center justify-content-flex-start mt-3"
-          >
-            <i class="fa-brands fa-spotify mx-3 p-1"></i> Spotify
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="./top-bot-style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="middle.css" />
+  <link rel="stylesheet" href="album.css" />
+</head>
+
+<body>
+  <div class="navbar-custom d-none d-lg-block d-xl-block d-xxl-block">
+    <ul class="navbar-nav">
+      <li class="nav-item my-3">
+        <div class="text-light heading d-flex align-items-center justify-content-flex-start mt-3">
+          <i class="fa-brands fa-spotify mx-3 p-1"></i> Spotify
+        </div>
+      </li>
+      <li class="nav-item">
+        <button type="button"
+          class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
+          style="height: 60px">
+          <i class="fa-solid fa-house mx-3"></i>
+          <div class="w-75 d-flex">
+            <a class="side-bar" href="./index.html">Home</a>
           </div>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button"
+          class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
+          style="height: 60px">
+          <i class="fa-solid fa-magnifying-glass mx-3"></i>
+          <div class="w-75 d-flex">
+            <a class="side-bar" href="#">Search</a>
+          </div>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button"
+          class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
+          style="height: 60px">
+          <i class="fa-regular fa-bookmark mx-3"></i>
+          <div class="w-75 d-flex">Your Library</div>
+        </button>
+      </li>
+      <li class="nav-item margin-top">
+        <button type="button"
+          class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
+          style="height: 60px">
+          <i class="fa-solid fa-plus mx-2"></i>
+          <div class="w-75 d-flex">Create Playlist</div>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button"
+          class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
+          style="height: 60px">
+          <i class="fa-solid fa-heart mx-2"></i>
+          <div class="w-75 d-flex">Liked Songs</div>
+        </button>
+      </li>
+    </ul>
+    <div class="playlists mt-3">
+      <ul>
+        <li class="nav-item-playlists"><a>Funky Heavy Bluesy</a></li>
+        <li class="nav-item-playlists"><a>Your Top Songs 2020</a></li>
+        <li class="nav-item-playlists"><a>In Love With You</a></li>
+        <li class="nav-item-playlists"><a>This is Rod Steward</a></li>
+        <li class="nav-item-playlists"><a>FRANCHISE ft Young Thug</a></li>
+        <li class="nav-item-playlists"><a>Your Top Songs 2019</a></li>
+        <li class="nav-item-playlists"><a>Pallegio</a></li>
+        <li class="nav-item-playlists"><a>This Joe Bonamassa</a></li>
+        <li class="nav-item-playlists"><a>Jun 19</a></li>
+        <li class="nav-item-playlists">
+          <a>Jack 30th Party 2<i class="fa-solid fa-user-group"></i></a>
         </li>
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
-            style="height: 60px"
-          >
-            <i class="fa-solid fa-house mx-3"></i>
-            <div class="w-75 d-flex">
-              <a class="side-bar" href="#">Home</a>
-            </div>
-          </button>
+        <li class="nav-item-playlists">
+          <a>Jack 30th Party<i class="fa-solid fa-user-group"></i></a>
         </li>
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
-            style="height: 60px"
-          >
-            <i class="fa-solid fa-magnifying-glass mx-3"></i>
-            <div class="w-75 d-flex">
-              <a class="side-bar" href="#">Search</a>
-            </div>
-          </button>
-        </li>
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
-            style="height: 60px"
-          >
-            <i class="fa-regular fa-bookmark mx-3"></i>
-            <div class="w-75 d-flex">Your Library</div>
-          </button>
-        </li>
-        <li class="nav-item margin-top">
-          <button
-            type="button"
-            class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
-            style="height: 60px"
-          >
-            <i class="fa-solid fa-plus mx-2"></i>
-            <div class="w-75 d-flex">Create Playlist</div>
-          </button>
-        </li>
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn w-100 h-50 py-md-2 text-light button-hover text-left d-flex align-items-center justify-content-around"
-            style="height: 60px"
-          >
-            <i class="fa-solid fa-heart mx-2"></i>
-            <div class="w-75 d-flex">Liked Songs</div>
-          </button>
-        </li>
+        <li class="nav-item-playlists"><a>This is Opeth</a></li>
+        <li class="nav-item-playlists"><a>Metal Ballads</a></li>
+        <li class="nav-item-playlists"><a>New Playlist </a></li>
+        <li class="nav-item-playlists"><a>Your Top Songs 2018</a></li>
+        <li class="nav-item-playlists"><a>Jazz Classics Blue Note</a></li>
       </ul>
-      <div class="playlists mt-3">
-        <ul>
-          <li class="nav-item-playlists"><a>Funky Heavy Bluesy</a></li>
-          <li class="nav-item-playlists"><a>Your Top Songs 2020</a></li>
-          <li class="nav-item-playlists"><a>In Love With You</a></li>
-          <li class="nav-item-playlists"><a>This is Rod Steward</a></li>
-          <li class="nav-item-playlists"><a>FRANCHISE ft Young Thug</a></li>
-          <li class="nav-item-playlists"><a>Your Top Songs 2019</a></li>
-          <li class="nav-item-playlists"><a>Pallegio</a></li>
-          <li class="nav-item-playlists"><a>This Joe Bonamassa</a></li>
-          <li class="nav-item-playlists"><a>Jun 19</a></li>
-          <li class="nav-item-playlists">
-            <a>Jack 30th Party 2<i class="fa-solid fa-user-group"></i></a>
-          </li>
-          <li class="nav-item-playlists">
-            <a>Jack 30th Party<i class="fa-solid fa-user-group"></i></a>
-          </li>
-          <li class="nav-item-playlists"><a>This is Opeth</a></li>
-          <li class="nav-item-playlists"><a>Metal Ballads</a></li>
-          <li class="nav-item-playlists"><a>New Playlist </a></li>
-          <li class="nav-item-playlists"><a>Your Top Songs 2018</a></li>
-          <li class="nav-item-playlists"><a>Jazz Classics Blue Note</a></li>
-        </ul>
-      </div>
-      <div>
-        <span class="m-3 download"
-          ><i class="fa-regular fa-circle-down mt-3"></i> Install App</span
-        >
-      </div>
     </div>
+    <div>
+      <span class="m-3 download"><i class="fa-regular fa-circle-down mt-3"></i> Install App</span>
+    </div>
+  </div>
 
-    <main class="body">
-      <nav class="navbar sticky-top mb-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex"></div>
-          <a href="./index.html"
-            ><i class="fa-solid fa-chevron-left chevrons"></i></a
-          ><i class="fa-solid fa-chevron-right chevrons"></i>
-        </div>
+  <main class="body">
+    <nav class="navbar sticky-top mb-3">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex"></div>
+        <a href="./index.html"><i class="fa-solid fa-chevron-left chevrons"></i></a><i
+          class="fa-solid fa-chevron-right chevrons"></i>
+      </div>
 
-        <div class="d-flex align-items-center" id="rightnav">
-          <div class="dropdown">
-            <button
-              class="btn btn-dark dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="border-radius: 25px"
-            >
-              User
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-dark"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li>
-                <a class="dropdown-item" href="./Login/login.html">Log out</a>
-              </li>
-            </ul>
-          </div>
+      <div class="d-flex align-items-center" id="rightnav">
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false" style="border-radius: 25px">
+            User
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" href="./Login/login.html">Log out</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <div class="container-fluid">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container-fluid px-0">
-            <div class="d-flex">
-              <div id="cover" class="cover">
-                <!-- <img
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid px-0">
+          <div class="d-flex">
+            <div id="cover" class="cover">
+              <!-- <img
                   class="hero-img"
                   src="https://images.unsplash.com/photo-1615185990787-0c2561e830e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80"
                   alt="Card image cap"
                 /> -->
-              </div>
-              <div class="hero-description">
-                <p class="lead">Album</p>
-                <h1 id="album-title" class="display-4">
-                  Peaceful Piano (Album 1)
-                </h1>
-                <p id="artist" class="lead">Coldply</p>
-              </div>
+            </div>
+            <div class="hero-description">
+              <p class="lead">Album</p>
+              <h1 id="album-title" class="display-4">
+                Peaceful Piano (Album 1)
+              </h1>
+              <p id="artist" class="lead">Coldply</p>
             </div>
           </div>
         </div>
-        <div class="controls">
-          <div class="play-button-outer">
-            <div class="play-button"></div>
-          </div>
-          <div class="like-icon">
-            <i class="bi bi-heart"></i>
-          </div>
+      </div>
+      <div class="controls">
+        <div class="play-button-outer">
+          <div class="play-button"></div>
         </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Title</th>
-              <th scope="col"></th>
-              <th scope="col">Time</th>
-            </tr>
-          </thead>
-          <tbody id="song-list-body">
-            <!-- <tr>
+        <div class="like-icon">
+          <i class="bi bi-heart"></i>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col"></th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody id="song-list-body">
+          <!-- <tr>
               <th scope="row">1</th>
               <td>
                 <p class="song-title">Peaceful Piano</p>
@@ -214,77 +185,62 @@
               <td></td>
               <td>3:30</td>
             </tr> -->
-          </tbody>
-        </table>
-      </div>
+        </tbody>
+      </table>
+    </div>
 
-      <section class="player-section fixed-bottom">
-        <div
-          class="music-player d-flex justify-content-between align-items-center"
-        >
-          <div class="song-info d-flex">
-            <div class="col-md-4">
-              <img
-                src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div
-              class="col-md-8 pl-0 d-flex justify-content-center align-items-center flex-column"
-            >
-              <h6 class="card-title">Song Title goes here</h6>
-              <p class="card-text">Artist name here</p>
-            </div>
-            <div
-              class="icons-area d-flex justify-content-center align-items-center"
-            >
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-pip"></i>
-            </div>
+    <section class="player-section fixed-bottom">
+      <div class="music-player d-flex justify-content-between align-items-center">
+        <div class="song-info d-flex">
+          <div class="col-md-4">
+            <img src="https://img.huffingtonpost.com/asset/5badb5be200000e500ff1775.jpeg?ops=scalefit_720_noupscale"
+              class="img-fluid rounded-start" alt="..." />
           </div>
-
-          <div
-            class="play-info-area d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="icons-area">
-              <i class="bi bi-shuffle"></i>
-              <i class="bi bi-skip-start-fill"></i>
-              <i class="bi bi-play-circle-fill play-pause-btn"></i>
-              <i class="bi bi-skip-end-fill"></i>
-              <i class="bi bi-arrow-repeat"></i>
-            </div>
-            <div class="progress-area">
-              <span>0:47</span>
-              <div class="progress-bar">
-                <div class="progress"></div>
-              </div>
-              <span>3:20</span>
-            </div>
+          <div class="col-md-8 pl-0 d-flex justify-content-center align-items-center flex-column">
+            <h6 class="card-title">Song Title goes here</h6>
+            <p class="card-text">Artist name here</p>
           </div>
+          <div class="icons-area d-flex justify-content-center align-items-center">
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-pip"></i>
+          </div>
+        </div>
 
-          <div class="other-feature-area mr-3">
-            <i class="bi bi-music-note-list"></i>
-            <i class="bi bi-speaker-fill"></i>
-            <div class="volume-area">
-              <i class="bi bi-volume-up"></i>
-              <div class="progress-bar">
-                <div class="progress"></div>
-              </div>
+        <div class="play-info-area d-flex flex-column justify-content-center align-items-center">
+          <div class="icons-area">
+            <i class="bi bi-shuffle"></i>
+            <i class="bi bi-skip-start-fill"></i>
+            <i class="bi bi-play-circle-fill play-pause-btn"></i>
+            <i class="bi bi-skip-end-fill"></i>
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+          <div class="progress-area">
+            <span>0:47</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span>3:20</span>
+          </div>
+        </div>
+
+        <div class="other-feature-area mr-3">
+          <i class="bi bi-music-note-list"></i>
+          <i class="bi bi-speaker-fill"></i>
+          <div class="volume-area">
+            <i class="bi bi-volume-up"></i>
+            <div class="progress-bar">
+              <div class="progress"></div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <script src="./album.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/e4eb2d5ba9.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <script src="./album.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e4eb2d5ba9.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
