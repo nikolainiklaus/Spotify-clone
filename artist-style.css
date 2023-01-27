@@ -98,10 +98,11 @@ main {
 .pause-button {
   width: 2em;
   height: 2em;
-  position: absolute;
-  margin-inline: 0 auto;
-  top: 40px;
-  left: 70px;
+  margin: 0 auto;
+  top: 33%;
+  left: 23%;
+  position: relative;
+  opacity: 0.75;
 }
 
 .pause-button::before,

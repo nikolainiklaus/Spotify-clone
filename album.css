@@ -137,6 +137,42 @@ tr th {
   opacity: 1;
 }
 
+.pause-button {
+  width: 2em;
+  height: 2em;
+  margin: 0 auto;
+  top: 33%;
+  left: 20%;
+  position: relative;
+  opacity: 0.75;
+}
+
+.pause-button::before,
+.pause-button::after {
+  content: "";
+  position: absolute;
+  width: 0.3em;
+  height: 1.1em;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.pause-button::before {
+  left: 0;
+}
+
+.pause-button::after {
+  left: 0.5em;
+}
+
+.paused .pause-button::before {
+  transform: translateX(10px);
+}
+
+.paused .pause-button::after {
+  transform: translateX(-10px);
+}
+
 .like-icon {
   position: absolute;
   bottom: 4px;
