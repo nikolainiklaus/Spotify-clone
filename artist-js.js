@@ -97,3 +97,17 @@ setUsername = () => {
   //then we are setting the innerText/html of the elementss to the name
   document.getElementById("dropdownMenuButton1").innerText = `${currentUser}`;
 };
+
+const playBtn = () => {
+  let buttonContainers = document.getElementsByClassName("play-button-outer");
+  for (let buttonContainer of buttonContainers) {
+    buttonContainer.addEventListener("click", toggleBtn);
+  }
+};
+
+const toggleBtn = () => {
+  let playBtnNode = document.querySelector(".play-button");
+  let pauseBtnNode = document.querySelector(".pause-button");
+  playBtnNode.classList.toggle("d-none");
+  pauseBtnNode.classList.toggle("d-none");
+};

@@ -91,8 +91,43 @@ main {
   scale: 1.1;
 }
 
-.play-button-outer:hover .play-button {
+.play-button-outer:hover .play-button .pause-button {
   opacity: 1;
+}
+
+.pause-button {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  margin-inline: 0 auto;
+  top: 40px;
+  left: 70px;
+}
+
+.pause-button::before,
+.pause-button::after {
+  content: "";
+  position: absolute;
+  width: 0.3em;
+  height: 1.1em;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.pause-button::before {
+  left: 0;
+}
+
+.pause-button::after {
+  left: 0.5em;
+}
+
+.paused .pause-button::before {
+  transform: translateX(10px);
+}
+
+.paused .pause-button::after {
+  transform: translateX(-10px);
 }
 
 .icons {

@@ -15,7 +15,6 @@ a {
   color: white;
 }
 
-
 a:hover {
   text-decoration: underline;
 }
@@ -160,10 +159,10 @@ h1 {
   font-weight: 700;
 }
 
-.bi-heart{
+.bi-heart {
   cursor: pointer;
 }
 
-.bi-heart:active{
+.bi-heart:active {
   color: #1bd760;
 }
